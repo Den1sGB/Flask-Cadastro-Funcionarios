@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Funcionário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_cadastro.css') }}" />
+</head>
+<body>
+    <h1>Cadastro de Funcionário</h1>
+    <form method="POST">
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <input type="text" name="primeiro_nome" required><br>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" required><br>
+
+        <label for="data_admissao">Data de Admissão:</label>
+        <input type="date" name="data_admissao" required><br>
+
+        <label for="status_funcionario">Status Funcionário:</label>
+        <input type="radio" name="status_funcionario" value="1" required> Ativo
+        <input type="radio" name="status_funcionario" value="0" required> Inativo<br>
+
+        <label for="setor">Setor:</label>
+        <select name="setor">
+            {% for setor in setores %}
+            <option value="{{ setor.id }}">{{ setor.name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="cargo">Cargo:</label>
+        <select name="cargo">
+            {% for cargo in cargos %}
+            <option value="{{ cargo.id }}">{{ cargo.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    <div class="button-container">
+        <br><br<br><br>
+        <a href="{{ url_for('index') }}" class="btn">Setores e Cargos</a>
+        <a href="{{ url_for('lista_funcionarios') }}" class="btn">Lista de Funcionários</a>
+    </div>
+</body>
+</html>

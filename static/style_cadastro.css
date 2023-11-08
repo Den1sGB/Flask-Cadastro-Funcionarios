@@ -1,0 +1,124 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: green;
+    margin-top: 30px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    padding: 20px; 
+    padding-right: 40px;
+    background-color: purple;
+    border-radius: 10px;
+    width: 400px; 
+}
+
+label {
+    display: block;
+    color: white; 
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 10px; 
+    color: black;
+}
+
+input[type="radio"] {
+    margin-top: 5px;
+    color: white;
+}
+
+select {
+    width: 100%;
+    color: white; 
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+input[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 10px; 
+    color: black; 
+}
+
+select option {
+    color: black; 
+}
+
+
+.button-container {
+    text-align: center;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
+.btn:hover {
+    background-color: darkgreen;
+}
+
+
+.btn-confirm {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.btn-confirm:hover {
+    background-color: darkgreen;
+}

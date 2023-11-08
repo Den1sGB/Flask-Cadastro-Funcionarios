@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Funcionários</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_funcionarios.css') }}" />
+</head>
+<body>
+    <h1>Lista de Funcionários</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Primeiro Nome</th>
+                <th>Sobrenome</th>
+                <th>Data de Admissão</th>
+                <th>Status Funcionário</th>
+                <th>Setor</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for funcionario in funcionarios %}
+            <tr>
+                <td>{{ funcionario.id }}</td>
+                <td>{{ funcionario.primeiro_nome }}</td>
+                <td>{{ funcionario.sobrenome }}</td>
+                <td>{{ funcionario.data_admissao }}</td>
+                <td>{{ "Ativo" if funcionario.status_funcionario else "Inativo" }}</td>
+                <td>{{ funcionario.setor.name }}</td>
+                <td>{{ funcionario.cargo.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="button-container">
+        <a href="{{ url_for('cadastro_funcionario') }}" class="btn">Cadastrar Funcionários</a>
+    </div>
+</body>
+</html>
